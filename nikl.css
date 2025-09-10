@@ -1,16 +1,22 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
 body {
   margin: 0;
   font-family: "Arial", sans-serif;
   background-color: #fff;
   color: #111;
+  width: 100vw;
 }
 header {
   background: #111;
   color: white;
   display: flex;
   align-items: center;
-  position: absolute;
-  width: 100%;
+  max-width: 90vw;
   justify-content: space-between;
   padding: 15px 30px;
 }
@@ -20,9 +26,7 @@ header {
 .topbar {
   display: flex;
   justify-content: end;
-  margin-right: 50px;
   gap: 20px;
-  padding: 10px;
 }
 .topbar img {
   width: 24px;
@@ -50,12 +54,14 @@ nav a:hover {
     center/cover no-repeat;
   height: 70vh;
   display: flex;
+  width: 90vw;
+  overflow: hidden;
   align-items: center;
   justify-content: center;
   color: white;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
   flex-direction: column;
-  padding: 0 20px;
+  padding: 0;
 }
 .hero h1 {
   font-size: 48px;
@@ -63,7 +69,7 @@ nav a:hover {
 }
 .hero p {
   font-size: 20px;
-  margin: 15px 0 30px;
+  margin: 15px 0;
 }
 .hero button {
   background-color: #ff6700;
@@ -148,4 +154,9 @@ footer {
   text-align: center;
   padding: 20px 10px;
   margin-top: 50px;
+}
+@media only screen and (max-width: 768px) {
+  nav {
+    display: none;
+  }
 }
